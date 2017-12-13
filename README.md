@@ -59,14 +59,14 @@ If you're using a paginator that allows sorting on fields, e.g. [jekyll-paginate
 pagination:
   # ...
   sort_field: "stickiness"
-  reverse: false
+  sort_reverse: false
   # ...
 
 # ...etc...
 
 stickyposts:
-  #sort: "date"   # or your original pagination sort_field
-  #reverse: true  # ditto for the pagination reverse
+  sort: "date"   # or your original pagination sort_field
+  #reverse: true  #  ditto for the sort_reverse
   # ...etc...
 ```
 
@@ -77,7 +77,7 @@ No changes will be required in your pagination setup:
 ...etc...
 {% endfor %}
 ```
-## Additional configuration
+## Miscellany
 
 You may want to mark sticky posts with e.g. a pin from [FontAwesome](http://fontawesome.io/):
 
@@ -113,3 +113,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 Everyone interacting in the Jekyll::StickyPosts project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/jekyll-stickyposts/blob/master/CODE_OF_CONDUCT.md).
+
+## Also by the author
+
+[Jekyll Tweetsert Plugin](https://github.com/ibrado/jekyll-tweetsert) - Turn tweets into Jekyll documents. Multiple timelines, filters, hashtags, automatic category/tags, and more!
