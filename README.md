@@ -56,6 +56,16 @@ stickyposts:
 
 ## Usage
 
+Just add a `sticky: true` entry to your front matter:
+
+```yaml
+---
+title: Test
+date: 2017-12-15 22:33:44
+sticky: true:
+---
+```
+
 If you're not using a paginator, use something like:
 
 ```html
