@@ -1,12 +1,13 @@
 # Jekyll::StickyPosts
 
-*Version 1.0.0*
+[![Gem Version](https://badge.fury.io/rb/jekyll-stickyposts.svg)](https://badge.fury.io/rb/jekyll-stickyposts)
 
 *StickyPosts* is a plugin for [Jekyll](https://jekyllrb.com/) that sticks/pins posts marked `sticky: true` to the top, i.e. it moves them  before all others. Optionally, the posts could also appear where they normally would.
 
 ### Why do this?
 
 1. You want to keep important announcements, etc. at the top of your home page
+1. You want descriptive entries to appear at the top of your collections
 
 ## Installation
 
@@ -38,6 +39,17 @@ stickyposts:
   sort: "blah"      # Optional sort field; default: "date", use "none" to avoid sorting
   reverse: true     # Ascending order, default: false
   retain: true      # Also show sticky posts in their original positions; default: false
+
+  #collection: articles   # The collection to "stickify"; default "posts"
+
+  # Or multiple collections:
+  #collections:
+  # - posts
+  # - articles
+
+  # Same thing:
+  #collections: ["posts", "articles"]
+
 ```
 
 > Note: if you set `sort` to `"none"` and don't sort as described in the next section, Jekyll will re-sort the documents by date. This may move the sticky posts out of position.
@@ -85,6 +97,25 @@ You may want to mark sticky posts with e.g. a pin from [FontAwesome](http://font
 {% if post.sticky %}
   <span class="sticky"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
 {% endif %}
+```
+
+Or, if you want to put a header/descriptive post at the top of your collections:
+
+```html
+{% if post.sticky %}
+  # Formatting for the header
+{% else %}
+  # Formatting for normal entries
+{% endif %}
+```
+
+Or similarly:
+
+```html
+{% unless post.sticky %}
+  # Meta information for the entry
+{% endunless %}
+  # The rest of the entry description, e.g. excerpt
 ```
 
 ## Demo
