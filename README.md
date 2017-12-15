@@ -62,7 +62,7 @@ Just add a `sticky: true` entry to your front matter:
 ---
 title: Test
 date: 2017-12-15 22:33:44
-sticky: true:
+sticky: true
 ---
 ```
 
