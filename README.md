@@ -1,6 +1,6 @@
 # Jekyll::StickyPosts
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-stickyposts.svg)](https://badge.fury.io/rb/jekyll-stickyposts)
+*Version 1.1.0*
 
 *StickyPosts* is a plugin for [Jekyll](https://jekyllrb.com/) that sticks/pins posts marked `sticky: true` to the top, i.e. it moves them  before all others. Optionally, the posts could also appear where they normally would.
 
@@ -52,7 +52,7 @@ stickyposts:
 
 ```
 
-> Note: if you set `sort` to `"none"` and don't sort as described in the next section, Jekyll will re-sort the documents by date. This may move the sticky posts out of position.
+> Note: if you set `sort` to `"none"` and don't sort as described in the next section, Jekyll will re-sort the documents by date. This will likely move the sticky posts out of position.
 
 ## Usage
 
@@ -157,4 +157,4 @@ Everyone interacting in the Jekyll::StickyPosts project's codebases, issue track
 
 ## Also by the author
 
-[Jekyll Tweetsert Plugin](https://github.com/ibrado/jekyll-tweetsert) - Turn tweets into Jekyll documents. Multiple timelines, filters, hashtags, automatic category/tags, and more!
+[Jekyll Tweetsert Plugin](https://github.com/ibrado/jekyll-tweetsert) - Turn tweets into Jekyll posts. Multiple timelines, filters, hashtags, automatic category/tags, and more!
