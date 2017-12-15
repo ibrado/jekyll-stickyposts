@@ -83,6 +83,7 @@ module Jekyll
             end
           end
 
+          sticky.reverse! if config["reverse_sticky"]
           sorted.unshift(*sticky)
 
           order = 0;

@@ -39,6 +39,7 @@ stickyposts:
   sort: "blah"      # Optional sort field; default: "date", use "none" to avoid sorting
   reverse: true     # Ascending order, default: false
   retain: true      # Also show sticky posts in their original positions; default: false
+  reverse_sticky: true    # Reverse the order of the sticky ppsts
 
   #collection: articles   # The collection to "stickify"; default "posts"
 
