@@ -1,13 +1,19 @@
 # Jekyll::StickyPosts
 
-*Version 1.1.0*
+[![Gem Version](https://badge.fury.io/rb/jekyll-stickyposts.svg)](https://badge.fury.io/rb/jekyll-stickyposts)
 
 *StickyPosts* is a plugin for [Jekyll](https://jekyllrb.com/) that sticks/pins posts marked `sticky: true` to the top, i.e. it moves them  before all others. Optionally, the posts could also appear where they normally would.
 
-### Why do this?
+## Why do this?
 
 1. You want to keep important announcements, etc. at the top of your home page
 1. You want descriptive entries to appear at the top of your collections
+
+## What's new?
+
+*v1.2.0* Add `reverse_sticky` option
+
+*v1.1.0* Support multiple collections
 
 ## Installation
 
@@ -39,7 +45,7 @@ stickyposts:
   sort: "blah"      # Optional sort field; default: "date", use "none" to avoid sorting
   reverse: true     # Ascending order, default: false
   retain: true      # Also show sticky posts in their original positions; default: false
-  reverse_sticky: true    # Reverse the order of the sticky ppsts
+  reverse_sticky: true    # Reverse the order of the sticky posts, e.g. oldest first; default: false
 
   #collection: articles   # The collection to "stickify"; default "posts"
 
