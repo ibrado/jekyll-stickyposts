@@ -6,11 +6,12 @@ require "jekyll/stickyposts/version"
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-stickyposts"
   spec.version       = Jekyll::StickyPosts::VERSION
+  spec.required_ruby_version = '>= 2.0.0'
   spec.authors       = ["Alex Ibrado"]
   spec.email         = ["alex@ibrado.org"]
 
   spec.summary       = %q{StickyPosts: Sticky/pinned posts for Jekyll}
-  spec.description   = %q{This Jekyll plugin sticks/pins posts tagged sticky: true, i.e. moves them before all others. Optionally, the posts could also appear where they normally would. Sorting and ordering options are available. Compatible with pagination.}
+  spec.description   = %q{This Jekyll plugin sticks/pins posts tagged sticky: true, i.e. moves them before all others. Optionally, the posts could also appear where they normally would. Sorting and ordering options are available. Compatible with pagination and collections.}
   spec.homepage      = "https://github.com/ibrado/jekyll-stickyposts"
   spec.license       = "MIT"
 
