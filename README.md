@@ -11,6 +11,8 @@
 
 ## What's new?
 
+*v1.2.1* Fix sorting
+
 *v1.2.0* Add `reverse_sticky` option
 
 *v1.1.0* Support multiple collections
