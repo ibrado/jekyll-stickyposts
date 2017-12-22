@@ -151,7 +151,7 @@ See the [author's blog](https://ibrado.org/) for a (possible) demo.
 1. Commit your changes (`git commit -m "Bug fix"`)
 1. Build it (`gem build jekyll-stickyposts.gemspec`)
 1. Install and test it (`gem install ./jekyll-stickyposts-*.gem`)
-1. Repeat from step 3 as necessary
+1. Repeat from step 5 as necessary
 1. Push the branch (`git push -u origin my-bug-fix`)
 1. Create a Pull Request, making sure to select the proper branch, e.g. `my-bug-fix` (via https://github.com/*your_user_name*/jekyll-stickyposts)
 
