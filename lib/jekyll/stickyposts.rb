@@ -10,8 +10,8 @@ module Jekyll
       Jekyll.logger.info "StickyPosts:", msg
     end
 
-    def self.debug(msg)
-      self.info msg if @debug
+    def self.debug(msg, doc = nil)
+      self.info msg if @debug && (doc.nil? || !doc.data['autogen_page'])
     end
 
     class Generator < Jekyll::Generator
@@ -68,7 +68,7 @@ module Jekyll
           sticky = []
           sorted.delete_if do |doc|
             if doc.data['sticky']
-              StickyPosts::debug "\"#{doc.data['title']}\" is sticky, #{remove ? "removing" : "retaining"} copy"
+              StickyPosts::debug "\"#{doc.data['title']}\" is sticky; #{remove ? "removing" : "retaining"} copy", doc
               if remove
                 sticky << doc
               else
@@ -92,19 +92,19 @@ module Jekyll
 
           StickyPosts::info "[#{collection}] #{sticky.length} post(s) pinned"
         end
-
-        private
-        def sort_value(data, path)
-          value = data
-
-          path.split(":").each do |key|
-            return nil unless value = value[key.downcase.strip]
-          end
-
-          value.is_a?(Hash) ? nil : value
-        end
-        
       end
+
+      private
+      def sort_value(data, path)
+        value = data
+
+        path.split(":").each do |key|
+          return nil unless value = value[key.downcase.strip]
+        end
+
+        value.is_a?(Hash) ? nil : value
+      end
+
     end
   end
 end
