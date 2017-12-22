@@ -53,13 +53,11 @@ module Jekyll
                 -1
               elsif !a.nil? && b.nil?
                 1
-              end
-
-              if a.respond_to?('to_datetime') && b.respond_to?('to_datetime')
+              elsif a.respond_to?('to_datetime') && b.respond_to?('to_datetime')
                 a.to_datetime <=> b.to_datetime
+              else
+                a <=> b
               end
-
-              a <=> b
             }
 
             sorted.reverse! if sort_reverse
