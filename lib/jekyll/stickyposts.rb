@@ -46,8 +46,8 @@ module Jekyll
 
           unless config["sort"] == "none"
             sorted.sort! { |docB, docA|
-              a = docA.data[sort_field]
-              b = docB.data[sort_field]
+              a = sort_value(docA.data, sort_field)
+              b = sort_value(docB.data, sort_field)
 
               if a.nil? && !b.nil?
                 -1
@@ -94,6 +94,18 @@ module Jekyll
 
           StickyPosts::info "[#{collection}] #{sticky.length} post(s) pinned"
         end
+
+        private
+        def sort_value(data, path)
+          value = data
+
+          path.split(":").each do |key|
+            return nil unless value = value[key.downcase.strip]
+          end
+
+          value.is_a?(Hash) ? nil : value
+        end
+        
       end
     end
   end
