@@ -1,4 +1,4 @@
-require "jekyll/stickyposts/version"
+require "jekyll-stickyposts/version"
 
 module Jekyll
   module StickyPosts
