@@ -11,6 +11,8 @@
 
 ## What's new?
 
+*v1.2.2* Allow inclusion in `_config.yml` plugins
+
 *v1.2.1* Fix sorting
 
 *v1.2.0* Add `reverse_sticky` option
