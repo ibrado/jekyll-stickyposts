@@ -77,7 +77,7 @@ sticky: true
 ---
 ```
 
-If you're not using a paginator, use something like:
+If you're using the original jekyll-paginate, or not using a paginator at all, use something like:
 
 ```html
 {% assign sorted = site.posts | sort: "stickiness" %}
