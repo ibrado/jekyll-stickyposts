@@ -77,19 +77,19 @@ sticky: true
 ---
 ```
 
-If you're using the original jekyll-paginate, use something like:
+If you're not using a paginator at all, use something like:
 
 ```html
-{% assign sorted = paginator.posts | sort: "stickiness" %}
+{% assign sorted = site.posts | sort: "stickiness" %}
 {% for post in sorted %}
 ...etc...
 {% endfor %}
 ```
 
-If not using a paginator at all:
+If you're using the original jekyll-paginate:
 
 ```html
-{% assign sorted = site.posts | sort: "stickiness" %}
+{% assign sorted = paginator.posts | sort: "stickiness" %}
 {% for post in sorted %}
 ...etc...
 {% endfor %}
