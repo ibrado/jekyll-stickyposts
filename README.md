@@ -77,7 +77,16 @@ sticky: true
 ---
 ```
 
-If you're using the original jekyll-paginate, or not using a paginator at all, use something like:
+If you're using the original jekyll-paginate, use something like:
+
+```html
+{% assign sorted = paginator.posts | sort: "stickiness" %}
+{% for post in sorted %}
+...etc...
+{% endfor %}
+```
+
+If not using a paginator at all:
 
 ```html
 {% assign sorted = site.posts | sort: "stickiness" %}
@@ -169,3 +178,7 @@ Everyone interacting in the Jekyll::StickyPosts project's codebases, issue track
 ## Also by the author
 
 [Jekyll Tweetsert Plugin](https://github.com/ibrado/jekyll-tweetsert) - Turn tweets into Jekyll posts. Multiple timelines, filters, hashtags, automatic category/tags, and more!
+
+[Jekyll::Paginate::Content](https://github.com/ibrado/jekyll-tweetsert) - Split your Jekyll pages, posts, etc. into multiple pages automatically. Single-page view, pager, SEO support, self-adjusting links, multipage-aware Table Of Contents.
+
+[Jekyll::ViewSource](https://github.com/ibrado/jekyll-viewsource) - Generate pretty or plain HTML and/or Markdown source code pages.
